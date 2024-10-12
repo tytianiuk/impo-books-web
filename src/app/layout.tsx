@@ -1,11 +1,15 @@
-import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
-import "./globals.css";
-
-const montserrat = Montserrat({ subsets: ['latin'] });
+import type { Metadata } from 'next';
+import '../theme/globals.css';
+import montserrat from '@/theme/fonts/montserrat';
 
 export const metadata: Metadata = {
-  title: "ImpoBooks",
+  title: 'ImpoBooks',
+  icons: [
+    {
+      rel: 'icon',
+      url: '/favicon.ico',
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -15,11 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${montserrat.className} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${montserrat.className} antialiased`}>{children}</body>
     </html>
   );
 }
