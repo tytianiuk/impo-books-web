@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
+
 import '../theme/globals.css';
-import montserrat from '@/theme/fonts/montserrat';
+import Header from '@/components/header/header';
+import inter from '@/theme/fonts/inter';
 
 export const metadata: Metadata = {
   title: 'ImpoBooks',
@@ -19,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased`}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
