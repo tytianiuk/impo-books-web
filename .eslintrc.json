@@ -7,11 +7,9 @@
     "plugin:import/recommended",
     "plugin:import/typescript"
   ],
-  "plugins": [
-    "prettier"
-  ],
+  "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
     "import/order": [
       "error",
       {
