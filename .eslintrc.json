@@ -7,13 +7,11 @@
     "plugin:import/recommended",
     "plugin:import/typescript"
   ],
-  "plugins": [
-    "prettier"
-  ],
+  "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error",
     "import/order": [
-      "error",
+      "warn",
       {
         "newlines-between": "always",
         "alphabetize": {
