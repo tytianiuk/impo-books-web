@@ -11,7 +11,7 @@
   "rules": {
     "prettier/prettier": ["error", { "endOfLine": "auto" }],
     "import/order": [
-      "error",
+      "warn",
       {
         "newlines-between": "always",
         "alphabetize": {

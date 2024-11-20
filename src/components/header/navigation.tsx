@@ -4,6 +4,7 @@ import { Menu } from 'lucide-react';
 import Link from 'next/link';
 import { FC, useState } from 'react';
 
+import ProfileButton from '@/components/header/profile-button';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -57,9 +58,7 @@ const Navigation: FC = () => {
                 <MenuItems />
               </nav>
             </SheetHeader>
-            <Link href="/auth">
-              <Button>Увійти</Button>
-            </Link>
+            <ProfileButton className="flex" />
           </SheetContent>
         </Sheet>
       </div>
